@@ -1,0 +1,5 @@
+<%@ page contentType="text/html; charset=utf-8" %>
+<span>이전 페이지에서 지정한 번호 : <%= number %></span><br>
+<%
+	String dataFolder = "C:\\data";
+%>

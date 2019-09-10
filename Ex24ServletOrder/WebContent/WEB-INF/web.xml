@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+
+  <display-name>Ex24ServletOrder</display-name>
+  
+  <!-- load-on-startup : 해당 서블릿의 init 메서드를 자동으로 호출함. -->
+  <servlet>
+  	<servlet-name>Servlet1</servlet-name>
+  	<servlet-class>test.Servlet1</servlet-class>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <!-- mapping : 해당 서블릿에 특별한 요청이 들어올 경우, 그 URL의 패턴을 지정함. -->
+  <servlet-mapping>
+  	<servlet-name>Servlet1</servlet-name>
+  	<url-pattern>/test1/*</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>Servlet2</servlet-name>
+  	<servlet-class>test.Servlet2</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>Servlet2</servlet-name>
+  	<url-pattern>/test2/*</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+</web-app>
